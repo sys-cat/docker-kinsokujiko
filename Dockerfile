@@ -1,4 +1,5 @@
-FROM ubuntu
-RUN apt-get update && apt-get upgrade
-RUN apt-get -y install vim
+FROM golang:1.6-alpine
 
+MAINTAINER sys-cat <systemcat91@gmail.com>
+
+RUN go env
