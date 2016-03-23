@@ -8,7 +8,7 @@ RUN apt-get update &&\
       git\
       make\
       curl\
-      xz\
+      xz-utils\
       mecab\
       mecab-ipadic-utf8\
       libmecab-dev\
