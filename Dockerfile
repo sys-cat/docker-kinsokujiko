@@ -43,5 +43,5 @@ RUN go get github.com/mattn/gom &&\
     gom install &&\
     ls -la vendor &&\
     echo $GOPATH &&\
-    ls -la /go &&\
+    ls -la /go/bin &&\
     go run mecab-golang.go
