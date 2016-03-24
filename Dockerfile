@@ -33,7 +33,7 @@ RUN cd /tmp &&\
 
 ADD script/exports.sh /app/exports.sh
 #CMD ["/app/exports.sh"]
-ENV GOPATH "$GOPATH:`pwd`/vendor"
+
 RUN go get github.com/mattn/gom &&\
     #mkdir /app &&\
     cd /app &&\
