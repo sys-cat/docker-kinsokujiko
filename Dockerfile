@@ -34,7 +34,8 @@ RUN cd /tmp &&\
 ADD script/exports.sh /app/exports.sh
 CMD ["/app/exports.sh"]
 RUN go get github.com/mattn/gom &&\
-    mkdir /app && cd /app &&\
+    #mkdir /app &&\
+    cd /app &&\
     git clone https://github.com/sys-cat/Kinsokujiko.git &&\
     cd Kinsokujiko &&\
     go run mecab-golang.go
