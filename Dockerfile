@@ -13,8 +13,8 @@ RUN apt-get update &&\
       mecab-ipadic-utf8\
       libmecab-dev\
       libstdc++6\
-      libstdc++6-4.7-dev &&\
-      patch &&\
+      libstdc++6-4.7-dev\
+      patch\
       gcc &&\
     apt-get clean
 
