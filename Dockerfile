@@ -31,4 +31,6 @@ RUN cd /tmp &&\
 #    make install &&\
 #    echo 'eval "($direnv hook bash)"' >> ~/.bashrc && . ~/.bashrc
 
-RUN go env
+RUN go get github.com/mattn/gom &&\
+    cd ~ &&\
+    pwd
