@@ -40,7 +40,7 @@ RUN go get github.com/mattn/gom &&\
     git clone https://github.com/sys-cat/Kinsokujiko.git &&\
     cd Kinsokujiko &&\
     . /app/exports.sh &&\
-    gom install &&\
+    gom install && gom build &&\
     echo $GOPATH &&\
     ls -la vendor/github.com &&\
     ls -la /go/bin &&\
