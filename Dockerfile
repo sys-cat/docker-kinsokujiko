@@ -35,6 +35,7 @@ ADD script/exports.sh /app/exports.sh
 CMD ["/app/exports.sh"]
 RUN go get github.com/mattn/gom &&\
     #mkdir /app &&\
+    echo $CGO_LDFLAGS &&\
     cd /app &&\
     git clone https://github.com/sys-cat/Kinsokujiko.git &&\
     cd Kinsokujiko &&\
