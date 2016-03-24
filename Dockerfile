@@ -36,7 +36,7 @@ ADD script/exports.sh /app/exports.sh
 RUN go get github.com/mattn/gom &&\
     #mkdir /app &&\
     cd /app &&\
-    . /app/exports.sh
+    . /app/exports.sh &&\
     git clone https://github.com/sys-cat/Kinsokujiko.git &&\
     cd Kinsokujiko &&\
     gom install &&\
