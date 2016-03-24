@@ -28,4 +28,4 @@ RUN cd /tmp &&\
     git clone https://github.com/direnv/direnv &&\
     cd direnv &&\
     make install &&\
-    eval "($direnv hook bash)"
+    echo 'eval "($direnv hook bash)"' >> ~/.bashrc && source ~/.bashrc
