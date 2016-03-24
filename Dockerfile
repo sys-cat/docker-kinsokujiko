@@ -20,5 +20,5 @@ RUN apt-get update &&\
 RUN cd /tmp &&\
     git clone --depth 1 https://github.com/neologd/mecab-ipadic-neologd.git &&\
     cd mecab-ipadic-neologd &&\
-    ./bin/install-mecab-ipadic-neologd -n &&\
+    yes yes | ./bin/install-mecab-ipadic-neologd -n&&\
     echo "10日放送の「中居正広のミになる図書館」（テレビ朝日系）で、SMAPの中居正広が、篠原信一の過去の勘違いを明かす一幕があった。" | mecab -d `mecab-config --dicdir`"/mecab-ipadic-neologd"
