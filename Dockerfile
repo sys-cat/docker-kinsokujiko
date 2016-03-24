@@ -37,11 +37,11 @@ ADD script/exports.sh /app/exports.sh
 RUN go get github.com/mattn/gom &&\
     #mkdir /app &&\
     cd /app &&\
-    . /app/exports.sh &&\
     git clone https://github.com/sys-cat/Kinsokujiko.git &&\
     cd Kinsokujiko &&\
+    . /app/exports.sh &&\
     gom install &&\
-    ls -la vendor &&\
     echo $GOPATH &&\
+    ls -la vendor/github.com &&\
     ls -la /go/bin &&\
     go run mecab-golang.go
