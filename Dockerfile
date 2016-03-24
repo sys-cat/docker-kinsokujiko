@@ -23,8 +23,9 @@ RUN apt-get update &&\
 RUN cd /tmp &&\
     git clone --depth 1 https://github.com/neologd/mecab-ipadic-neologd.git &&\
     cd mecab-ipadic-neologd &&\
-    yes yes | ./bin/install-mecab-ipadic-neologd -n --asuser&&\
-    cd /tmp &&\
+    yes yes | ./bin/install-mecab-ipadic-neologd -n --asuser
+
+RUN cd /tmp &&\
     git clone https://github.com/direnv/direnv &&\
     cd direnv &&\
     make install &&\
