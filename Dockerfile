@@ -25,8 +25,10 @@ RUN cd /tmp &&\
     cd mecab-ipadic-neologd &&\
     yes yes | ./bin/install-mecab-ipadic-neologd -n --asuser
 
-RUN cd /tmp &&\
-    git clone https://github.com/direnv/direnv &&\
-    cd direnv &&\
-    make install &&\
-    echo 'eval "($direnv hook bash)"' >> ~/.bashrc && . ~/.bashrc
+#RUN cd /tmp &&\
+#    git clone https://github.com/direnv/direnv &&\
+#    cd direnv &&\
+#    make install &&\
+#    echo 'eval "($direnv hook bash)"' >> ~/.bashrc && . ~/.bashrc
+
+RUN go env
