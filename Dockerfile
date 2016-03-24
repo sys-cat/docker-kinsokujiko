@@ -25,25 +25,13 @@ RUN cd /tmp &&\
     cd mecab-ipadic-neologd &&\
     yes yes | ./bin/install-mecab-ipadic-neologd -n --asuser
 
-#RUN cd /tmp &&\
-#    git clone https://github.com/direnv/direnv &&\
-#    cd direnv &&\
-#    make install &&\
-#    echo 'eval "($direnv hook bash)"' >> ~/.bashrc && . ~/.bashrc
-
+# git clone Kinsokujiko, setting environment values.
 ADD script/exports.sh /app/exports.sh
-RUN go get github.com/mattn/gom &&\
-    #mkdir /app &&\
-    cd /app &&\
+RUN cd /app &&\
     git clone https://github.com/sys-cat/Kinsokujiko.git &&\
     cd Kinsokujiko &&\
-    . /app/exports.sh &&\
-    go get github.com/gin-gonic/gin &&\
-    go get github.com/bluele/mecab-golang &&\
-    #   gom install && gom build
+    . /app/exports.sh
 
+# run mecab-golang
 RUN cd /app/Kinsokujiko &&\
-    echo $GOPATH &&\
-    ls -la _vendor/&&\
-    ls -la /go/bin &&\
     go run mecab-golang.go
