@@ -40,7 +40,7 @@ RUN go get github.com/mattn/gom &&\
     git clone https://github.com/sys-cat/Kinsokujiko.git &&\
     cd Kinsokujiko &&\
     gom install &&\
-    ls -la &&\
+    ls -la vendor &&\
     export GOPATH="$GOPATH:`pwd`/vendor" &&\
     echo $GOPATH &&\
     go run mecab-golang.go
