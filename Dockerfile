@@ -15,7 +15,8 @@ RUN apt-get update &&\
       libstdc++6\
       libstdc++6-4.7-dev\
       patch\
-      gcc &&\
+      gcc\
+      file &&\
     apt-get clean
 
 # add mecab dic file
