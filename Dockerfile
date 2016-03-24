@@ -32,11 +32,11 @@ RUN cd /tmp &&\
 #    echo 'eval "($direnv hook bash)"' >> ~/.bashrc && . ~/.bashrc
 
 ADD script/exports.sh /app/exports.sh
-CMD ["/app/exports.sh"]
+#CMD ["/app/exports.sh"]
 RUN go get github.com/mattn/gom &&\
     #mkdir /app &&\
-    echo $CGO_LDFLAGS &&\
     cd /app &&\
+    . /app/exports.sh
     git clone https://github.com/sys-cat/Kinsokujiko.git &&\
     cd Kinsokujiko &&\
     gom install &&\
