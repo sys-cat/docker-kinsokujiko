@@ -31,6 +31,10 @@ RUN cd /tmp &&\
 #    make install &&\
 #    echo 'eval "($direnv hook bash)"' >> ~/.bashrc && . ~/.bashrc
 
+ADD script/exports.sh /app/exports.sh
+CMD ["/app/exports.sh"]
 RUN go get github.com/mattn/gom &&\
-    cd ~ &&\
-    pwd
+    mkdir /app && cd /app &&\
+    git clone https://github.com/sys-cat/Kinsokujiko.git &&\
+    cd Kinsokujiko &&\
+    go run mecab-golang.go
