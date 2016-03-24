@@ -40,6 +40,7 @@ RUN go get github.com/mattn/gom &&\
     git clone https://github.com/sys-cat/Kinsokujiko.git &&\
     cd Kinsokujiko &&\
     . /app/exports.sh &&\
+    github.com/bluele/mecab-golang &&\
     gom install && gom build
 
 RUN cd /app/Kinsokujiko &&\
