@@ -40,4 +40,5 @@ RUN go get github.com/mattn/gom &&\
     git clone https://github.com/sys-cat/Kinsokujiko.git &&\
     cd Kinsokujiko &&\
     gom install &&\
+    ls -la &&\
     go run mecab-golang.go
